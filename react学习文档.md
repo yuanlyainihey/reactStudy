@@ -1,3 +1,12 @@
+## git 操作
+
+```git
+git pull
+
+git add ./*
+git commit -m "xxxx"
+git push -u origin master
+```
 ## react 安装
 
 1. 安装node.js
