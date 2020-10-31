@@ -1,8 +1,8 @@
 ## git 操作
 
 ```git
+git init
 git pull
-
 git add ./*
 git commit -m "xxxx"
 git push -u origin master
