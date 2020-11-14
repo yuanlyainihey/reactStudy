@@ -1329,9 +1329,46 @@ class MyComponent extends React.Component {
 }
 ```
 
+## React 错误边界
 
+> 默认情况下，若一个组件在渲染期间（render）发生错误，会导致整个组件树全部被卸载。
+>
+> 错误边界：是一个组件，该组件会捕获到渲染期间（render）子组件发生的错误，并有能力阻止错误继续传播。
 
+**组件中添加捕获错误**
 
+> 1. 编写生命周期函数 getDerivedStateFromError
+>
+>    1. 该函数为静态函数 `static getDerivedStateFromError`
+>
+>    2. 运行时间点：子组件被渲染发生错误之后且页面更新之前
+>
+>    3. 只有子组件发生错误时，该函数才会被执行
+>
+>    4. 该函数返回一个对象，React会将该对象的属性覆盖掉当前组件的state
+>
+>    5. 参数：错误对象
+>
+>    6. 通常该函数用于改变状态值
+>
+>       ```react
+>       class ErrorBound extends React.Component {
+>           this.state = { hasError:false }
+>       	// 该函数为静态函数
+>           static getDerivedStateFromError(error){
+>               // 返回的值会自动 调用setState，将值和state合并
+>               return { hasError:true }
+>           }
+>           render(){
+>               if(this.state.hasError){
+>                   return null
+>               }
+>               return this.props.children
+>           }
+>       }
+>       ```
+>
+> 2. 编写生命周期函数 componentDidCatch
 
 
 
