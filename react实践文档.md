@@ -312,7 +312,7 @@ axios.all([getUserAccount(), getUserPermissions()])
 }));
 ```
 
-**axios API**
+### **axios API**
 
 > 可以通过向 axios 传递相关配置来创建请求。
 
@@ -351,7 +351,7 @@ var instance = axios.create({
 });
 ```
 
-**请求配置**
+### **请求配置**
 
 > 这些是创建请求时可以用的配置选项。只有 `url` 是必需的。如果没有指定 `method`，请求将默认使用 `get` 方法。
 
@@ -482,7 +482,7 @@ var instance = axios.create({
 }
 ```
 
-**响应结构**
+### **响应结构**
 
 > 某个请求的响应包含以下信息
 
@@ -519,7 +519,7 @@ axios.get('/user/12345').then(function(response) {
 
 > 在使用 `catch` 时，或传递 [rejection callback](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 作为 `then` 的第二个参数时，响应可以通过 `error` 对象可被使用。
 
-**配置的默认值/defaults**
+### **配置的默认值/defaults**
 
 ```react
 ## 全局的 axios 默认值
@@ -551,7 +551,7 @@ instance.get('/longRequest', {
 });
 ```
 
-**拦截器**
+### **拦截器**
 
 > 在请求或响应被 `then` 或 `catch` 处理前拦截它们。
 
@@ -583,7 +583,7 @@ var instance = axios.create();
 instance.interceptors.request.use(function () {/*...*/});
 ```
 
-**错误处理**
+###  **错误处理**
 
 ```react
 axios.get('/user/12345').catch(function (error) {
@@ -607,7 +607,7 @@ axios.get('/user/12345', {
 })
 ```
 
-**取消**
+### **取消**
 
 > 使用 *cancel token* 取消请求
 >
@@ -693,6 +693,26 @@ export default connect(
     mapDispatchToProps
 )(Counter);
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
